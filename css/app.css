@@ -1,0 +1,220 @@
+/* Media queries */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-color: unset;
+    background-image: url("../img/Netflix.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+  }
+}
+
+a {
+  color: #8c8c8c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.contenedor {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.site-header img {
+  margin-top: 1.4rem;
+  width: 170px;
+  margin-left: 2%;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .site-header img {
+    margin-top: 1.5rem;
+    margin-left: 3%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .formulario-login {
+    background-color: rgba(0, 0, 0, 0.85);
+    max-width: 450px;
+    padding: 4rem 4rem 4rem 4rem;
+    margin: 0.5rem auto 4rem auto;
+    border-radius: 5px;
+  }
+}
+
+form legend {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 1.4rem;
+}
+
+form .campo {
+  display: flex;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+form .campo label {
+  position: absolute;
+  color: #8c8c8c;
+  top: 1.1rem;
+  left: 1rem;
+  transition: 300ms;
+}
+
+form .campo input {
+  flex: 1;
+  padding: 1.3rem 1rem 0.7rem 1rem;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #323232;
+}
+
+form .campo input:focus {
+  background-color: #454545;
+  outline: none;
+}
+
+form .campo input:focus + label {
+  font-size: 0.7rem;
+  top: 0.5rem;
+}
+
+form .submit input {
+  width: 100%;
+  background-color: #e50914;
+  padding: 1rem 3rem;
+  text-decoration: none;
+  border: none;
+  font-weight: 700;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 300ms;
+  margin-top: 1rem;
+}
+
+form .submit input:hover {
+  background-color: #af0911;
+}
+
+.acciones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  padding-bottom: 3rem;
+}
+
+.acciones .recuerdame {
+  color: #8c8c8c;
+}
+
+.contenido-inferior {
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenido-inferior p {
+  flex: 1;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.contenido-inferior .nuevo-usuario {
+  font-size: 1rem;
+}
+
+.contenido-inferior .nuevo-usuario a {
+  color: #ffffff;
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+}
+
+.contenido-inferior p {
+  font-size: 0.8rem;
+  color: #8c8c8c;
+}
+
+.contenido-inferior p a {
+  color: #3737ff;
+}
+
+.site-footer {
+  border-top: 1px solid #8c8c8c;
+  min-height: 12rem;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 30px;
+}
+
+@media (min-width: 768px) {
+  .site-footer {
+    border-top: unset;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-footer .contenedor {
+    width: 60%;
+  }
+}
+
+.site-footer .contenedor p {
+  color: #8c8c8c;
+}
+
+.site-footer .menu-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.site-footer .menu-footer a {
+  padding: 0.5rem 0;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+}
+
+@media (min-width: 768px) {
+  .site-footer .menu-footer {
+    font-size: 0.9rem;
+    flex-direction: row;
+  }
+}
+
+.site-footer select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 1rem 3rem;
+  border: 1px solid #454545;
+  background-color: #000000;
+  font-size: 0.8rem;
+  color: #8c8c8c;
+}

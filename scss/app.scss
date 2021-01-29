@@ -1,0 +1,204 @@
+@import "variables";
+@import "mixins";
+
+html {
+  @include box-sizing(border-box);
+}
+*,
+*:after,
+*:before {
+  @include box-sizing(inherit);
+}
+
+body {
+  background-color: $negro;
+  font-family: $fuente_principal;
+
+  @include tablet {
+    background-color: unset;
+    background-image: url("../img/Netflix.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+  }
+}
+
+a {
+  color: $gris2;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.contenedor {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.site-header {
+  img {
+    margin-top: 1.4rem;
+    width: 170px;
+    margin-left: 2%;
+    margin-bottom: 3rem;
+  }
+
+  @include tablet {
+    img {
+      margin-top: 1.5rem;
+      margin-left: 3%;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.formulario-login {
+  @include tablet {
+    background-color: rgba(0, 0, 0, 0.85);
+    max-width: 450px;
+    padding: 4rem 4rem 4rem 4rem;
+    margin: 0.5rem auto 4rem auto;
+    border-radius: 5px;
+  }
+}
+
+form {
+  legend {
+    color: $blanco;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .campo {
+    display: flex;
+    position: relative;
+    margin-bottom: 1rem;
+
+    label {
+      position: absolute;
+      color: $gris2;
+      top: 1.1rem;
+      left: 1rem;
+      transition: 300ms;
+    }
+
+    input {
+      flex: 1;
+      padding: 1.3rem 1rem 0.7rem 1rem;
+      border: none;
+      width: 100%;
+      border-radius: 5px;
+      background-color: $gris;
+
+      &:focus {
+        background-color: $gris3;
+        outline: none;
+
+        + label {
+          font-size: 0.7rem;
+          top: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .submit {
+    input {
+      @include boton($primario);
+      color: $blanco;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 300ms;
+      margin-top: 1rem;
+
+      &:hover {
+        background-color: $primario_hover;
+      }
+    }
+  }
+}
+
+.acciones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  padding-bottom: 3rem;
+
+  .recuerdame {
+    color: $gris2;
+  }
+}
+
+.contenido-inferior {
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  p {
+    flex: 1;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+  }
+  .nuevo-usuario {
+    font-size: 1rem;
+    a {
+      color: $blanco;
+      margin-bottom: 0.6rem;
+      cursor: pointer;
+    }
+  }
+  p {
+    font-size: 0.8rem;
+    color: $gris2;
+    a {
+      color: rgb(55, 55, 255);
+    }
+  }
+}
+
+.site-footer {
+  border-top: 1px solid $gris2;
+  min-height: 12rem;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 30px;
+
+  @include tablet {
+    border-top: unset;
+  }
+  .contenedor {
+    @include tablet {
+      width: 60%;
+    }
+    p {
+      color: $gris2;
+    }
+  }
+  .menu-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    a {
+      padding: 0.5rem 0;
+      font-size: 0.8rem;
+      margin-bottom: 2rem;
+      margin-right: 2rem;
+    }
+
+    @include tablet {
+      font-size: 0.9rem;
+      flex-direction: row;
+    }
+  }
+  select {
+    appearance: none;
+    padding: 1rem 3rem;
+    border: 1px solid $gris3;
+    background-color: $negro;
+    font-size: 0.8rem;
+    color: $gris2;
+  }
+}
